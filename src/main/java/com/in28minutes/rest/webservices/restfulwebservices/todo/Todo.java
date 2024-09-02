@@ -2,6 +2,11 @@ package com.in28minutes.rest.webservices.restfulwebservices.todo;
 
 import java.time.LocalDate;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+
+@Entity
 public class Todo {
 
 	public Todo() {
@@ -17,6 +22,8 @@ public class Todo {
 		this.done = done;
 	}
 	
+	@Id
+	@GeneratedValue
 	private int id;
 
 	private String username;
